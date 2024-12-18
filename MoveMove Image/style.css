@@ -1,0 +1,27 @@
+section {
+  display: flex;
+  width: min(700px, 90%);
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #191919;
+}
+
+.img {
+  /* background-image: url("./laptop.jpeg"); */
+  background-image: radial-gradient(
+    circle at var(--x) var(--y),
+    hsl(0 0% 100% / .5),
+    transparent 150px
+  );
+  background-size: cover;
+  /* height: 80vh; */
+  width: 200px;
+  height: 200px;
+  background-position: center center;
+  background-attachment: fixed;
+
+}

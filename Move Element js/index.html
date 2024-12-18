@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+   <link rel="stylesheet" href="style2.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- <section>
+    <div></div>
+  </section> -->
+
+
+  <!-- <div class="container">
+    <div class="box first"></div>
+    <div class="box"><div class="glow" draggable="true"></div></div>
+    <div class="box"></div>
+    <div class="box last"></div>
+  </div> -->
+
+
+  <div class="wrapper">
+    <div class="box" style="--i:1"></div>
+    <div class="box" style="--i:2"></div>
+    <div class="box" style="--i:3"></div>
+    <div class="box" style="--i:4"></div>
+    <div class="box" style="--i:5"></div>
+  </div>
+
+
+  <script>
+    let boxes = document.querySelectorAll(".box");
+    let glow = document.querySelector(".glow");
+
+    let last = document.querySelector(".last");
+    last.appendChild(glow)
+
+    let first = document.querySelector(".first");
+    first.appendChild(glow)
+
+
+    boxes.forEach((box) => {
+      box.addEventListener("dragover", (e) => {
+        // glow.style.backgroundColor = "red"
+        console.log(e.target);
+        e.preventDefault();
+      })
+
+      box.addEventListener("drop", (e) => {
+        // glow.style.backgroundColor = "black"
+        console.log(e.target);
+        box.appendChild(glow)
+      })
+    })
+
+    // boxes.forEach((box) => {
+    //   box.addEventListener("dragover", function(e) {
+    //     console.log("*".repeat(50));
+    //     console.log("DragOver >>>>>>");
+    //     console.log(e);
+    //     console.log("*".repeat(50));
+    //     e.preventDefault();
+    //   })
+    //   box.addEventListener("drop", function(e) {
+    //     console.log("*".repeat(50));
+    //     console.log("Dropping >>>>>");
+    //     console.log(e);
+    //     console.log("*".repeat(50));
+    //     box.append(glow)
+    //   })
+    // })
+  </script>
+  <!-- <script src="./js.js"></script> -->
+</body>
+</html>

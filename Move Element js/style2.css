@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #243128;
+
+}
+
+.wrapper {
+  width: min(800px, 95%);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2f4036;
+  border-radius: 10px;
+}
+
+.wrapper .box {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  /* background-color: #red; */
+  /* box-shadow: 0 0 20px #00fb70; */
+  background-color: #fff;
+  animation-name: color;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+  animation-duration: 1s;
+  animation-delay: calc(var(--i) * 1s);
+
+}
+
+
+@keyframes color {
+  0%{
+    background-color: red;
+  }
+
+  30%,70%{
+    background-color: #fff;
+  }
+
+  100%{
+    background-color: red;
+  }
+}

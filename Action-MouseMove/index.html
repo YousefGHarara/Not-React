@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <section></section>
+
+  <script>
+
+    let section = document.querySelector("section");
+    for (let i = 0; i < 600; i++) {
+      let div = document.createElement("div");
+      section.appendChild(div);
+    }
+    document.addEventListener("mousemove", function(e) {
+      document.querySelectorAll("div").forEach((div) => {
+        let x = (div.offsetLeft) - e.pageX;
+        // console.log(x);
+        console.log(`X = ${x}`);
+        let y = (div.offsetTop) - e.pageY;
+        console.log(`Y = ${y}`);
+      //   let dist = Math.sqrt(x * x + y * y);
+      //   console.log(`dist = ${dist}`);
+      //   let score = Math.exp(dist * -0.01)
+      //   console.log(`Score = ${score}`);
+      //   div.style.transform = "scale(" + score * 1 + ")"
+      console.log("div : " + div.offsetLeft);
+      })
+
+      // console.log(e);
+      // console.log("e.pageX : " + e.pageX);
+      // console.log("e.pageY : " + e.pageY);
+      // console.log("e.pageY : " + e.);
+    })
+
+  </script>
+</body>
+</html>
